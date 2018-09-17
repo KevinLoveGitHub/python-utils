@@ -50,4 +50,5 @@ b = Button(f, text="发送", command=callback)
 b.pack(fill=BOTH, expand=1)
 
 ip_entry.focus()
+
 root.mainloop()
