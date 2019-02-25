@@ -24,7 +24,7 @@ center_window(500, 500)
 
 def encode_click(is_start: bool):
     print("encode_click", is_start)
-    ip = "10.0.1.40"
+    ip = "10.0.1.121"
     port = 1888
     if is_start:
         msg = "sonixcamerastart 30 1000 1 0"
@@ -43,7 +43,7 @@ def decode_click(is_start: bool):
     ip = "10.0.44.81"
     port = 1788
     if is_start:
-        msg = "vdecplay 8 0 voplay:8:3:0:0:640:360:0:0:640:360 shine_net://@10.0.1.40:8899 " \
+        msg = "vdecplay 8 0 voplay:8:3:0:0:640:360:0:0:640:360 shine_net://@10.0.1.121:8899 " \
               "drawtext:80:128:128:128:128:0:0:128:128:128:empty:/mnt/fonts/simhei.ttf: ;"
     else:
         msg = "vdecstop 8 15 ;"

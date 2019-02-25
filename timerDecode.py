@@ -14,6 +14,7 @@ def encode_click(is_start: bool):
     else:
         msg = "sonixcamerastop"
 
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     print("encode_click", msg)
     address = (ip, port)
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -32,6 +33,7 @@ def decode_click(is_start: bool):
         msg = "vdecstop 8 15 ;"
 
     print("decode_click", msg)
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     address = (ip, port)
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     client.sendto(bytes(msg, encoding="utf8"), address)
